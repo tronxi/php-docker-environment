@@ -1,0 +1,13 @@
+version: '3'
+services: 
+  gdevelop:
+    container_name: php
+    image: php
+    build:
+      context: ./
+    ports:
+      - "80:80"
+      - "3306:3306"
+    volumes: 
+      - ./www/:/app
+      - ./mysql:/var/lib/mysql
